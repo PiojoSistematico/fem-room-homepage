@@ -4,11 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        "dark-gray": "#a1a1a1",
-        "very-dark-gray": "#454545",
+        "primary-1": "#ffffff",
+        "primary-2": "#a1a1a1",
+        "primary-3": "#454545",
+        "primary-4": "#000000",
       },
       fontFamily: {
-        league: ["League Spartan", "sans-serif"],
+        LeagueSpartan: ["LeagueSpartan", "sans-serif"],
       },
     },
   },

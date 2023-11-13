@@ -1,7 +1,6 @@
-import Logo from "../assets/images/logo.svg";
-import iconMenu from "../assets/images/icon-hamburger.svg";
-import iconClose from "../assets/images/icon-close.svg";
 import { useState } from "react";
+import { IconClose, IconLogo, IconMenu } from "./Icons";
+import { Button } from "react-aria-components";
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,43 +10,14 @@ const Menu = () => {
   }
 
   return (
-    <header className={isMenuOpen ? "overlay" : ""}>
-      <a>
-        <img src={Logo} alt="Logo" />
+    <header className="p-8 absolute top-0 left-0 flex flex-row gap-8 text-primary-1">
+      <Button>
+        {isMenuOpen ? <IconClose></IconClose> : <IconMenu></IconMenu>}
+      </Button>
+      <a className="">
+        <IconLogo></IconLogo>
       </a>
-
-      <button
-        className="btn-menu mobile"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-        onClick={handleClick}
-      >
-        {isMenuOpen ? (
-          <img
-            className="icon-close"
-            src={iconClose}
-            alt="Close Menu"
-            aria-hidden="false"
-          />
-        ) : (
-          <img
-            className="icon-hamburger"
-            src={iconMenu}
-            alt="Open Menu"
-            aria-hidden="false"
-          />
-        )}
-
-        <span className="visually-hidden">Menu</span>
-      </button>
-      <nav
-        className={
-          isMenuOpen
-            ? "menu-open primary-navigation desktop"
-            : "primary-navigation desktop"
-        }
-        id="primary-navigation"
-      >
+      <nav className="hidden">
         <ul aria-label="Primary" role="list">
           <li>
             <a href="">Home</a>
