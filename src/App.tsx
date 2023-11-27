@@ -11,11 +11,15 @@ function App() {
       <main className="font-LeagueSpartan font-xs text-primary-2 font-medium relative md:h-screen md:grid md:grid-rows-3">
         <Header></Header>
         <Card></Card>
-        <section title="about" className="md:grid grid-cols-7 row-start-3">
-          <picture className="md:col-start-1 col-end-3">
-            <img className="object-contain w-full" src={imgAboutDark} alt="" />
+        <section title="about" className="row-start-3 md:grid md:grid-cols-7 ">
+          <picture className="overflow-hidden  md:col-start-1 md:col-end-3">
+            <img
+              className="object-contain h-full w-full md:object-fill"
+              src={imgAboutDark}
+              alt=""
+            />
           </picture>
-          <section className="p-8 flex flex-col gap-4 md:col-start-3 col-end-6">
+          <section className="p-8 flex flex-col gap-4 md:col-start-3 md:col-end-6">
             <h2 className="text-primary-4 font-bold text-2xl">
               About our furniture
             </h2>
@@ -28,8 +32,12 @@ function App() {
               to help you create your dream space.
             </p>
           </section>
-          <picture className="md:col-start-6 col-end-8">
-            <img className="object-contain w-full" src={imgAboutLight} alt="" />
+          <picture className="overflow-hidden md:col-start-6 md:col-end-8">
+            <img
+              className="object-contain h-full w-full md:object-fill"
+              src={imgAboutLight}
+              alt=""
+            />
           </picture>
         </section>
       </main>

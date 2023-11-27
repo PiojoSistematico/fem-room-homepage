@@ -10,15 +10,19 @@ const Menu = () => {
   }
 
   return (
-    <header className="p-8 absolute top-0 left-0 flex flex-row gap-8 text-primary-1">
-      <Button>
+    <header className="p-8 absolute top-0 left-0 flex flex-row gap-8 items-center text-primary-1 md:gap-12">
+      <Button className="md:hidden">
         {isMenuOpen ? <IconClose></IconClose> : <IconMenu></IconMenu>}
       </Button>
       <a className="">
         <IconLogo></IconLogo>
       </a>
-      <nav className="hidden">
-        <ul aria-label="Primary" role="list">
+      <nav className="hidden md:block">
+        <ul
+          aria-label="Primary"
+          role="list"
+          className="md:flex md:flex-row md:items-center md:gap-4"
+        >
           <li>
             <a href="">Home</a>
           </li>
