@@ -43,15 +43,21 @@ const Card: React.FunctionComponent = ({}) => {
         <p>{data[index].paragraph}</p>
         <a
           href="#"
-          className="text-primary-4 flex flex-row items-center gap-4 uppercase tracking-widest font-semibold"
+          className="text-primary-4 flex flex-row items-center gap-4 uppercase tracking-widest font-semibold hover:text-gray-500 focus-visible:text-gray-500"
         >
           <span>Shop Now</span> <IconArrow></IconArrow>
         </a>
         <div className="absolute -top-14 right-0 flex flex-row items-center bg-primary-4 w-min z-10 md:top-auto md:bottom-0 md:left-0 md:right-auto">
-          <Button onPress={handleLeftClick} className="p-4">
+          <Button
+            onPress={handleLeftClick}
+            className="p-4 hover:bg-gray-500 focus-visible:bg-gray-500"
+          >
             <IconAngleLeft></IconAngleLeft>
           </Button>
-          <Button onPress={handleRightClick} className="p-4">
+          <Button
+            onPress={handleRightClick}
+            className="p-4 hover:bg-gray-500 focus-visible:bg-gray-500"
+          >
             <IconAngleRight></IconAngleRight>
           </Button>
         </div>

@@ -1,39 +1,27 @@
-import { useState } from "react";
-import { IconClose, IconLogo, IconMenu } from "./Icons";
-import { Button } from "react-aria-components";
+import { IconLogo } from "./Icons";
+
+import CustomModal from "./CustomModal";
 
 const Menu = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  function handleClick(): void {
-    setIsMenuOpen(!isMenuOpen);
-  }
-
   return (
     <header className="p-8 absolute top-0 left-0 flex flex-row gap-8 items-center text-primary-1 md:gap-12">
-      <Button className="md:hidden">
-        {isMenuOpen ? <IconClose></IconClose> : <IconMenu></IconMenu>}
-      </Button>
+      <CustomModal></CustomModal>
       <a className="">
         <IconLogo></IconLogo>
       </a>
       <nav className="hidden md:block">
-        <ul
-          aria-label="Primary"
-          role="list"
-          className="md:flex md:flex-row md:items-center md:gap-4"
-        >
-          <li>
-            <a href="">Home</a>
+        <ul className="md:flex md:flex-row md:items-center md:gap-8">
+          <li className="border-b-2 border-solid border-transparent hover:border-white focus-visible:border-white">
+            <a href="#">Home</a>
           </li>
-          <li>
-            <a href="">Shop</a>
+          <li className="border-b-2 border-solid border-transparent hover:border-white focus-visible:border-white">
+            <a href="#">Shop</a>
           </li>
-          <li>
-            <a href="">About</a>
+          <li className="border-b-2 border-solid border-transparent hover:border-white focus-visible:border-white">
+            <a href="#">About</a>
           </li>
-          <li>
-            <a href="">Contact</a>
+          <li className="border-b-2 border-solid border-transparent hover:border-white focus-visible:border-white">
+            <a href="#">Contact</a>
           </li>
         </ul>
       </nav>
