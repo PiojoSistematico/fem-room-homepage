@@ -2,6 +2,16 @@ import { useState } from "react";
 import { IconAngleLeft, IconAngleRight, IconArrow } from "./Icons";
 import data from "../assets/data/data.json";
 import { Button } from "react-aria-components";
+import heroMobile1 from "../assets/images/mobile-image-hero-1.jpg";
+import heroMobile2 from "../assets/images/mobile-image-hero-2.jpg";
+import heroMobile3 from "../assets/images/mobile-image-hero-3.jpg";
+
+import heroDesktop1 from "../assets/images/desktop-image-hero-1.jpg";
+import heroDesktop2 from "../assets/images/desktop-image-hero-2.jpg";
+import heroDesktop3 from "../assets/images/desktop-image-hero-3.jpg";
+
+const mobile = [heroMobile1, heroMobile2, heroMobile3];
+const desktop = [heroDesktop1, heroDesktop2, heroDesktop3];
 
 const Card: React.FunctionComponent = ({}) => {
   const [index, setIndex] = useState(0);
@@ -15,6 +25,8 @@ const Card: React.FunctionComponent = ({}) => {
     index == length - 1 ? setIndex(0) : setIndex((prev) => prev + 1);
   }
 
+  console.log(index);
+
   return (
     <section
       title="hero section"
@@ -23,12 +35,12 @@ const Card: React.FunctionComponent = ({}) => {
       <picture className="overflow-hidden md:col-start-1 md:col-end-2 lg:col-end-3">
         <img
           className="object-contain h-full w-full md:hidden"
-          src={`/src/assets/images/mobile-image-hero-${index + 1}.jpg`}
+          src={mobile[index]}
           alt="hero image"
         />
         <img
           className="hidden md:block md:object-fill md:h-full md:w-full"
-          src={`/src/assets/images/desktop-image-hero-${index + 1}.jpg`}
+          src={desktop[index]}
           alt="hero image"
         />
       </picture>
