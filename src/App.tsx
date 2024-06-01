@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import Header from "./components/Header";
 import Card from "./components/Card";
 import imgAboutLight from "./assets/images/image-about-light.jpg";

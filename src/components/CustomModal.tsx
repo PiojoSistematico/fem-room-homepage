@@ -1,4 +1,3 @@
-import Logo from "../assets/images/logo-bookmark.svg";
 import {
   Button,
   Dialog,

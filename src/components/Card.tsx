@@ -3,20 +3,16 @@ import { IconAngleLeft, IconAngleRight, IconArrow } from "./Icons";
 import data from "../assets/data/data.json";
 import { Button } from "react-aria-components";
 
-/* type CardProps = {
-  info: { title: string; paragraph: string };
-};
- */
 const Card: React.FunctionComponent = ({}) => {
   const [index, setIndex] = useState(0);
 
   function handleLeftClick(): void {
-    const lenght = data.length;
-    index == 0 ? setIndex(lenght - 1) : setIndex((prev) => prev - 1);
+    const length = data.length;
+    index == 0 ? setIndex(length - 1) : setIndex((prev) => prev - 1);
   }
   function handleRightClick(): void {
-    const lenght = data.length;
-    index == lenght - 1 ? setIndex(0) : setIndex((prev) => prev + 1);
+    const length = data.length;
+    index == length - 1 ? setIndex(0) : setIndex((prev) => prev + 1);
   }
 
   return (
